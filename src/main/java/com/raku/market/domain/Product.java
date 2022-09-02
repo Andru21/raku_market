@@ -1,12 +1,10 @@
 package com.raku.market.domain;
 
-import java.math.BigDecimal;
-
 public class Product {
     private int productId;
     private String name;
     private int categoryId;
-    private BigDecimal price;
+    private double price;
     private int stock;
     private boolean active;
     private Category category;
@@ -35,11 +33,11 @@ public class Product {
         this.categoryId = categoryId;
     }
 
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -66,4 +64,5 @@ public class Product {
     public void setCategory(Category category) {
         this.category = category;
     }
+
 }

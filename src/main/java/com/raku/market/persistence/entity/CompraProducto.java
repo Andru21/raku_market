@@ -1,7 +1,7 @@
 package com.raku.market.persistence.entity;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
+
 
 @Entity
 @Table(name = "compras_productos")
@@ -11,7 +11,7 @@ public class CompraProducto {
 
     private Integer cantidad;
 
-    private BigDecimal total;
+    private Double total;
 
     private Boolean estado;
 
@@ -39,11 +39,11 @@ public class CompraProducto {
         this.cantidad = cantidad;
     }
 
-    public BigDecimal getTotal() {
+    public Double getTotal() {
         return total;
     }
 
-    public void setTotal(BigDecimal total) {
+    public void setTotal(Double total) {
         this.total = total;
     }
 
@@ -53,5 +53,21 @@ public class CompraProducto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Compra getCompra() {
+        return compra;
+    }
+
+    public void setCompra(Compra compra) {
+        this.compra = compra;
+    }
+
+    public Producto getProducto() {
+        return producto;
+    }
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 }

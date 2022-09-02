@@ -8,9 +8,9 @@ import java.math.BigDecimal;
 @Table(name = "productos")
 public class Producto {
 
-    @Column(name = "id_producto")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_producto")
     private Integer idProducto;
 
     private String nombre;
@@ -19,10 +19,10 @@ public class Producto {
     private Integer idCategoria;
 
     @Column(name = "codigo_barras")
-    private Integer codigoBarras;
+    private String codigoBarras;
 
     @Column(name = "precio_venta")
-    private BigDecimal precioVenta;
+    private Double precioVenta;
 
     @Column(name = "cantidad_stock")
     private Integer cantidadStock;
@@ -57,19 +57,19 @@ public class Producto {
         this.idCategoria = idCategoria;
     }
 
-    public Integer getCodigoBarras() {
+    public String getCodigoBarras() {
         return codigoBarras;
     }
 
-    public void setCodigoBarras(Integer codigoBarras) {
+    public void setCodigoBarras(String codigoBarras) {
         this.codigoBarras = codigoBarras;
     }
 
-    public BigDecimal getPrecioVenta() {
+    public Double getPrecioVenta() {
         return precioVenta;
     }
 
-    public void setPrecioVenta(BigDecimal precioVenta) {
+    public void setPrecioVenta(Double precioVenta) {
         this.precioVenta = precioVenta;
     }
 
@@ -92,6 +92,7 @@ public class Producto {
     public Categoria getCategoria() {
         return categoria;
     }
+
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }

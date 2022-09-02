@@ -7,9 +7,9 @@ import java.util.List;
 @Table(name = "categorias")
 public class Categoria {
 
-    @Column(name = "id_categorias")
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_categoria")
     private Integer idCategoria;
 
     private String descripcion;
@@ -48,4 +48,6 @@ public class Categoria {
     public void setProductos(List<Producto> productos) {
         this.productos = productos;
     }
+
 }
+
